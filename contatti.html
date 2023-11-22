@@ -10,21 +10,27 @@
     
     <!-- Aggiungere OpenGraph e Twitter Cards -->
 
-    <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('fDpa3NB6uR4cmGF8S');
+        })();
     </script>
     <script type="text/javascript">
-      (function(){
-        emailjs.init("fDpa3NB6uR4cmGF8S");
-      })();
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_a8d1bxp', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
     </script>
-    <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6LfkuBcpAAAAAGoV_shBO2KHjx9sBRN5N7gFaBqH'
-        });
-      };
-    </script>
+
     <script src="/script/email.js"></script>
   </head>
   <body>
@@ -59,7 +65,7 @@
 
         <span class="line"></span>
 
-        <form action="?" method="POST" class="block-content">
+        <form action="?" method="POST" class="block-content" id="contact-form">
           <div>
             <label for="name">Il tuo nome e cognome <span class="req">*</span></label>
             <input type="text" id="name" name="name" placeholder="Es. Mario Rossi" required>

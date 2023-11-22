@@ -1,0 +1,39 @@
+.card, .card__icon {
+  border: 1px solid $black-10;
+}
+
+.card {
+  border-radius: 25px;
+  width: 100%;
+  padding: 1.375rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  hgroup {
+    width: 100%;
+    margin-left: 1.125rem;
+  }
+}
+
+#lavori {
+  .card {
+  align-items: flex-start;
+  }
+
+  .card__icon {
+    padding: 0.25rem;
+  }
+}
+
+.card__icon {
+  border-radius: 50%;
+  padding: 0.7rem;
+  width: 70px;
+}
+
+/*
+.circle {
+
+}
+*/

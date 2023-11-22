@@ -1,0 +1,67 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 1.125rem;
+  height: 92svh;
+
+  &__text {
+    p {
+      font-size: 1.125rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: -0.8rem;
+      margin-left: -2px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 70%;
+
+    .horizontal {
+      width: 100%;
+      border-bottom: 1px solid $black-10;
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  &__img--circle {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 80%;
+    z-index: 1;
+  }
+}
+
+/*
+@media only screen and (max-width: ) {
+  .hero {
+    flex-direction: row;
+    margin: 0 1.750rem;
+
+    &__text {
+      margin: 0;
+    }
+
+    &__img {
+      width: 85%;
+    }
+  }
+}
+*/

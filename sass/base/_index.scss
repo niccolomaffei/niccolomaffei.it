@@ -1,0 +1,40 @@
+.container-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 1.125rem;
+
+  h3 {
+    position: sticky;
+    width: 100%;
+    top: 8svh;
+    border-bottom: 1px solid $black-10;
+    background-color: $soft-white;
+  }
+}
+
+.block-content {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.125rem;
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem auto;
+  }
+  
+
+  li {
+    list-style: none;
+    flex-direction: row;
+    margin: 0 0.75rem;
+  }
+}
+
+  

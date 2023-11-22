@@ -70,7 +70,7 @@
           </div>
           <div>
             <label for="subject">Per cosa mi scrivi <span class="req">*</span></label>
-            <textarea name="subject" id="subject" placeholder="Oggetto della mail" required></textarea>
+            <textarea name="subject" id="subject" placeholder="Oggetto della mail" rows="1" required></textarea>
           </div>
           <div>
             <label for="message">Cosa mi dici <span class="req">*</span></label>
@@ -79,9 +79,9 @@
 
           <p><span class="req">*</span> - Campi obbligatori</p>
 
-          <div id="html_element"></div>
+          <div id="html_element" class="g-recaptcha" data-sitekey="6LfkuBcpAAAAAGoV_shBO2KHjx9sBRN5N7gFaBqH" data-callback="enableBtn"></div>
 
-          <a href="contatti.html"><button type="submit" value="Submit" onclick="sendMail()">&#128233; Invia</button></a>
+          <a href="contatti.html"><button type="submit" value="Submit" id="submit_details" onclick="sendMail()" disabled>&#128233; Invia</button></a>
         </form>
       </div>
 

@@ -1,3 +1,5 @@
+/*
+
 function sendMail(){
   let parameters = {
     name : document.getElementById("name").value,
@@ -9,6 +11,5 @@ function sendMail(){
   emailjs.send("service_a8d1bxp", "template_ce99ea5", parameters).then(alert("Email inviata con successo!"))
 }
 
-function enableBtn(){
-  document.getElementById("submit_details").disabled = false;
-}
+*/
+

@@ -27,8 +27,6 @@
        emailjs.init("fDpa3NB6uR4cmGF8S");
       })();
     </script>
-
-    <script src="/script/email.js"></script>
   </head>
 
   <!-- Qui inizia il body -->
@@ -86,7 +84,7 @@
 
           <div id="html_element" class="g-recaptcha" data-sitekey="6LfkuBcpAAAAAGoV_shBO2KHjx9sBRN5N7gFaBqH" data-callback="enableBtn"></div>
 
-          <button type="submit" value="Submit" id="submit_details" onclick="sendForm()" disabled>&#128233; Invia</button>
+          <button id="button" type="button" value="Submit" id="submit_details" disabled>&#128233; Invia</button>
         </form>
       </div>
 
@@ -124,6 +122,8 @@
         <p>&copy; 2023 Realizzato da Niccolò Maffei</p>
       </footer>
     </div>
+
+    <script src="/script/email.js"></script>
 
     <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     </script>

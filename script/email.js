@@ -35,37 +35,58 @@
 //     );
 //   });
 
-//Getting the name and email from the DOM
-let params = {
-name : document.getElementById('name').value,
-email : document.getElementById('email').value,
-subject : document.getElementById('subject').value,
-message : document.getElementById('message').value
-};
+// //Getting the name and email from the DOM
+// let params = {
+// name : document.getElementById('name').value,
+// email : document.getElementById('email').value,
+// subject : document.getElementById('subject').value,
+// message : document.getElementById('message').value
+// };
 
-//Getting the button from the DOM
-let submitButton = document.getElementById('button') 
+// //Getting the button from the DOM
+// let submitButton = document.getElementById('button') 
 
-const serviceID = "service_a8d1bxp";
-const templateID = "template_ce99ea5";
+// const serviceID = "service_a8d1bxp";
+// const templateID = "template_ce99ea5";
 
-//Add event listener on click to the button - notice i added the event as argument to the function
-submitButton.addEventListener('click', function(event){
+// //Add event listener on click to the button - notice i added the event as argument to the function
+// submitButton.addEventListener('click', function(event){
 
-    //prevent the reload of the page. here i prevent the event.
-    event.preventDefault()
+//     //prevent the reload of the page. here i prevent the event.
+//     event.preventDefault()
 
-    //Sending the email with the name and email
-    emailjs.send(serviceID, templateID, params)
-        .then(
-            function (response) {
-                console.log("SUCCESS", response);
+//     //Sending the email with the name and email
+//     emailjs.send(serviceID, templateID, params)
+//         .then(
+//             function (response) {
+//                 console.log("SUCCESS", response);
                 
-            },
-            function (error) {
-                console.log("FAILED", error);
+//             },
+//             function (error) {
+//                 console.log("FAILED", error);
                 
-            }
+//             }
 
-        );
-})
+//         );
+// })
+
+const btn = document.getElementById('button');
+
+document.getElementById('contact-form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sta inviando';
+
+   const serviceID = 'service_a8d1bxp';
+   const templateID = 'template_ce99ea5';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Invia';
+      alert('Inviata!');
+    }, (err) => {
+      btn.value = 'Invia';
+      alert(JSON.stringify(err));
+    });
+});

@@ -36,10 +36,12 @@
 //   });
 
 //Getting the name and email from the DOM
-let name = document.getElementById('name').value;
-let email = document.getElementById('email').value;
-let subject = document.getElementById('subject').value;
-let message = document.getElementById('message').value;
+let params = {
+name : document.getElementById('name').value,
+email : document.getElementById('email').value,
+subject : document.getElementById('subject').value,
+message : document.getElementById('message').value
+};
 
 //Getting the button from the DOM
 let submitButton = document.getElementById('button') 
@@ -54,12 +56,7 @@ submitButton.addEventListener('click', function(event){
     event.preventDefault()
 
     //Sending the email with the name and email
-    emailjs.send(serviceID, templateID, {
-        "name": name,
-        "email": email,
-        "subject": subject,
-        "message": message
-    })
+    emailjs.send(serviceID, templateID, params)
         .then(
             function (response) {
                 console.log("SUCCESS", response);

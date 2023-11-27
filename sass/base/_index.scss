@@ -1,7 +1,7 @@
 .container-layout {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 1.125rem;
+  margin: 5rem 1.125rem;
 
   h3 {
     position: sticky;
@@ -37,4 +37,13 @@
   }
 }
 
-  
+@media only screen and (min-width: $tablets) {
+  .block-content {
+    margin: 2rem auto;
+    flex-wrap: nowrap;
+  }
+
+  #lavori .block-content {
+    flex-wrap: wrap;
+  } 
+}

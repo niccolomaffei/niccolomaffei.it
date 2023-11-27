@@ -32,8 +32,8 @@
   width: 70px;
 }
 
-/*
-.circle {
-
+@media only screen and (min-width: $tablets) {
+  .card {
+    width: 50%;
+  }
 }
-*/

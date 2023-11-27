@@ -19,13 +19,10 @@
     <meta property="og:image" content="/media/niccolo-maffei.webp"/>
 
     <!-- Script per EmailJS -->
-    <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script type="text/javascript">
-      (function(){
-       emailjs.init("fDpa3NB6uR4cmGF8S");
-      })();
+      emailjs.init('fDpa3NB6uR4cmGF8S')
     </script>
 
     <script src="/script/email.js"></script>
@@ -64,29 +61,29 @@
 
         <span class="line"></span>
 
-        <form action="?" method="POST" class="block-content" id="contact-form">
-          <div>
+        <form action="?" method="POST" class="block-content" id="form">
+          <div class="field">
             <label for="name">Il tuo nome e cognome <span class="req">*</span></label>
             <input type="text" id="name" name="name" placeholder="Es. Mario Rossi" required>
           </div>
-          <div>
+          <div class="field">
             <label for="email">La tua e-mail <span class="req">*</span></label>
             <input type="email" name="email" id="email" placeholder="mariorossi@esempio.it" required>
           </div>
-          <div>
+          <div class="field">
             <label for="subject">Per cosa mi scrivi <span class="req">*</span></label>
             <textarea name="subject" id="subject" placeholder="Oggetto della mail" rows="1" required></textarea>
           </div>
-          <div>
+          <div class="field">
             <label for="message">Cosa mi dici <span class="req">*</span></label>
             <textarea name="message" id="message" placeholder="Scrivi qui il testo della mail" required></textarea>
           </div>
 
-          <p><span class="req">*</span> - Campi obbligatori</p>
+          <p><span class="req">*</span> campi obbligatori</p>
 
-          <div id="html_element" class="g-recaptcha" data-sitekey="6LfkuBcpAAAAAGoV_shBO2KHjx9sBRN5N7gFaBqH" data-callback="enableBtn"></div>
+          <input type="submit" id="button" value="&#128233; Invia">
 
-          <button type="submit" value="Submit" id="submit_details" onclick="send()" disabled>&#128233; Invia</button>
+          <!-- <a href="contatti.html"><button type="submit" value="Submit" id="submit_details" onclick="sendMail()" disabled>&#128233; Invia</button></a> -->
         </form>
       </div>
 
@@ -125,14 +122,10 @@
       </footer>
     </div>
 
-    <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      emailjs.init('fDpa3NB6uR4cmGF8S')
     </script>
-
-<script>
-function enableBtn(){
-  document.getElementById("submit_details").disabled = false;
-}
-</script> -->
-
   </body>
 </html>

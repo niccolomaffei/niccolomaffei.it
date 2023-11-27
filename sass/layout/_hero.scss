@@ -49,8 +49,8 @@
   }
 }
 
-/*
-@media only screen and (max-width: ) {
+
+@media only screen and (min-width: $tablets) {
   .hero {
     flex-direction: row;
     margin: 0 1.750rem;
@@ -64,4 +64,3 @@
     }
   }
 }
-*/

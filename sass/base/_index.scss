@@ -19,14 +19,32 @@
   gap: 1.125rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .container-layout {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .block-content {
+    flex-wrap: wrap;
+  }
+}
+
 #social {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
   ul {
     display: flex;
     flex-direction: row;
     margin: 2rem auto;
+    max-width: 500px;
   }
   
 
@@ -45,5 +63,20 @@
 
   #lavori .block-content {
     flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      width: 49%;
+    }
   } 
+}
+
+@media only screen and (max-width: $tablets) {
+  .container {
+    flex-direction: column;
+
+    .container-layout:first-child {
+      margin-bottom: -3rem;
+    }
+  }
 }

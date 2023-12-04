@@ -53,75 +53,77 @@
         </nav>
       </header>
 
-      <div class="container-layout">
-        <hgroup>
-          <h3>Contattami</h3>
-          <p class="hero__text--size block-content">Per collaborazioni o lavori scrivimi compilando il form qui sotto. 
-            Ti risponderò il prima possibile.</p>
-        </hgroup>
+      <main class="page">  
+        <div class="container-layout">
+          <hgroup>
+            <h3>Contattami</h3>
+            <p class="hero__text--size block-content">Per collaborazioni o lavori scrivimi compilando il form qui sotto. 
+              Ti risponderò il prima possibile.</p>
+          </hgroup>
+
+          <span class="line"></span>
+
+          <form action="?" method="POST" class="block-content" id="contact-form">
+            <div>
+              <label for="name">Il tuo nome e cognome <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Es. Mario Rossi" required>
+            </div>
+            <div>
+              <label for="email">La tua e-mail <span class="req">*</span></label>
+              <input type="email" name="email" id="email" placeholder="mariorossi@esempio.it" required>
+            </div>
+            <div>
+              <label for="subject">Per cosa mi scrivi <span class="req">*</span></label>
+              <textarea name="subject" id="subject" placeholder="Oggetto della mail" rows="1" required></textarea>
+            </div>
+            <div>
+              <label for="message">Cosa mi dici <span class="req">*</span></label>
+              <textarea name="message" id="message" placeholder="Scrivi qui il testo della mail" required></textarea>
+            </div>
+
+            <p><span class="req">*</span> - Campi obbligatori</p>
+
+            <div id="html_element" class="g-recaptcha" data-sitekey="6LfkuBcpAAAAAGoV_shBO2KHjx9sBRN5N7gFaBqH" data-callback="enableBtn"></div>
+
+            <button id="button" type="submit" value="Invia">&#128233; Invia</button>
+          </form>
+        </div>
 
         <span class="line"></span>
 
-        <form action="?" method="POST" class="block-content" id="contact-form">
-          <div>
-            <label for="name">Il tuo nome e cognome <span class="req">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Es. Mario Rossi" required>
-          </div>
-          <div>
-            <label for="email">La tua e-mail <span class="req">*</span></label>
-            <input type="email" name="email" id="email" placeholder="mariorossi@esempio.it" required>
-          </div>
-          <div>
-            <label for="subject">Per cosa mi scrivi <span class="req">*</span></label>
-            <textarea name="subject" id="subject" placeholder="Oggetto della mail" rows="1" required></textarea>
-          </div>
-          <div>
-            <label for="message">Cosa mi dici <span class="req">*</span></label>
-            <textarea name="message" id="message" placeholder="Scrivi qui il testo della mail" required></textarea>
-          </div>
+        <div id="social"  class="container-layout">
+          <h3>Puoi seguirmi qui..</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/mffncl/" target="_blank">
+                <img src="/media/logo-facebook.webp" alt="Icona di Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/niccolomaffei/" target="_blank">
+                <img src="/media/logo-instagram.webp" alt="Icona di Instagram">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/maffeiniccolo/" target="_blank">
+                <img src="/media/logo-linkedin.webp" alt="Icona di Linkedin">
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/niccolomaffei" target="_blank">
+                <img src="/media/logo-github.webp" alt="Icona di GitHub">
+              </a>
+            </li>
+          </ul>
 
-          <p><span class="req">*</span> - Campi obbligatori</p>
+          <a href="contatti.html"><button>&#128233; Contattami</button></a>
+        </div>
 
-          <div id="html_element" class="g-recaptcha" data-sitekey="6LfkuBcpAAAAAGoV_shBO2KHjx9sBRN5N7gFaBqH" data-callback="enableBtn"></div>
-
-          <button id="button" type="submit" value="Invia">&#128233; Invia</button>
-        </form>
+        <footer class="container-layout">
+          <p>&copy; 2023 Realizzato da Niccolò Maffei</p>
+        </footer>
       </div>
-
-      <span class="line"></span>
-
-      <div id="social"  class="container-layout">
-        <h3>Puoi seguirmi qui..</h3>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/mffncl/" target="_blank">
-              <img src="/media/logo-facebook.webp" alt="Icona di Facebook">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/niccolomaffei/" target="_blank">
-              <img src="/media/logo-instagram.webp" alt="Icona di Instagram">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/maffeiniccolo/" target="_blank">
-              <img src="/media/logo-linkedin.webp" alt="Icona di Linkedin">
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/niccolomaffei" target="_blank">
-              <img src="/media/logo-github.webp" alt="Icona di GitHub">
-            </a>
-          </li>
-        </ul>
-
-        <a href="contatti.html"><button>&#128233; Contattami</button></a>
-      </div>
-
-      <footer class="container-layout">
-        <p>&copy; 2023 Realizzato da Niccolò Maffei</p>
-      </footer>
-    </div>
+    </main>
 
     <script src="/script/email.js"></script>
   </body>

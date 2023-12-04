@@ -473,9 +473,11 @@ p {
 #lavori {
   justify-content: center !important;
 }
-
 #lavori .card {
   width: 48%;
+}
+#lavori .block-content {
+  margin-bottom: 0 !important;
 }
 
 /*# sourceMappingURL=print.css.map */

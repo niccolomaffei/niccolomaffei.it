@@ -99,8 +99,12 @@ p {
 
 #lavori {
   justify-content: center !important;
-}
 
-#lavori .card {
-  width: 48%;
+  .card {
+    width: 48%;
+  }
+
+  .block-content {
+    margin-bottom: 0 !important;
+  }
 }

@@ -1,0 +1,106 @@
+@import
+  'base/colors',
+  'base/fonts';
+
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+
+@import
+  'base/reset',
+  'base/index',
+  'base/typography';
+
+@import
+  'components/buttons',
+  'components/cards',
+  'components/dropdown';
+
+@import
+  'layout/navigation',
+  'layout/header',
+  'layout/footer',
+  'layout/forms',
+  'layout/hero';
+
+@import
+  'pages/portfolio',
+  'pages/contatti';
+
+header, button, footer p, #social, .line {
+  display: none;
+}
+
+h1 {
+  font-size: 24px !important;
+}
+
+h2 {
+  font-size: 18px !important;
+}
+
+h3 {
+  font-size: 20px !important;
+}
+
+h4 {
+  font-size: 16px !important;
+}
+
+p {
+  font-size: 14px !important;
+}
+
+.container-layout {
+  margin: 0;
+
+  h3 {
+    position: static;
+  }
+}
+
+.page {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hero {
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.hero__img {
+  width: 200px;
+}
+
+#competenze, #studi-fatti {
+  width: 50%;
+  padding-left: 20px;
+}
+
+#esperienze-lavorative {
+  width: 50%;
+}
+
+.block-content {
+  margin: 20px 0;
+}
+
+.card {
+  padding: 12px;
+}
+
+#lavori {
+  justify-content: center !important;
+}
+
+#lavori .card {
+  width: 48%;
+}

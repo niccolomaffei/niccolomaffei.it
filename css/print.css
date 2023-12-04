@@ -407,6 +407,10 @@ header, button, footer p, #social, .line {
   display: none;
 }
 
+body {
+  background-color: #fff;
+}
+
 h1 {
   font-size: 24px !important;
 }
@@ -432,6 +436,7 @@ p {
 }
 .container-layout h3 {
   position: static;
+  background-color: #fff;
 }
 
 .page {

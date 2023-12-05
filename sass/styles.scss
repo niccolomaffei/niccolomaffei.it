@@ -3,10 +3,7 @@
   'base/fonts';
 
 @import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins',
-  'abstracts/placeholders';
+  'abstracts/variables';
 
 @import
   'base/reset',
@@ -15,11 +12,9 @@
 
 @import
   'components/buttons',
-  'components/cards',
-  'components/dropdown';
+  'components/cards';
 
 @import
-  'layout/navigation',
   'layout/header',
   'layout/footer',
   'layout/forms',
